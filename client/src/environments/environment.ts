@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://localhost:7135/api/'
+  apiUrl: 'http://khalifa-store-apis.runasp.net/api/'
 };
 
 /*
