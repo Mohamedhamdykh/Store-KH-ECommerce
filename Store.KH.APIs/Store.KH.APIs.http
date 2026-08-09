@@ -1,0 +1,6 @@
+@Store.KH.APIs_HostAddress = http://localhost:5233
+
+GET {{Store.KH.APIs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

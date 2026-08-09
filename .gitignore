@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+
+# ASP.NET
+appsettings.Development.json
+
+# Angular
+node_modules/
+dist/
+.angular/
+
+# Logs
+*.log
+# Configuration / Secrets
+appsettings.json
