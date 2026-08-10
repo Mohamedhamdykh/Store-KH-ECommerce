@@ -123,11 +123,15 @@ Swagger is available for API documentation and testing.
 
 ### 💳 Checkout & Payment
 
-![Checkout](Screenshots/Checkout-1.png)
+![Checkout 1](Screenshots/Checkout-1.png)
 
-![Checkout](Screenshots/Checkout-2.png)
+![Checkout 2](Screenshots/Checkout-2.png)
 
-![Checkout](Screenshots/Checkout-3.png)
+![Checkout 3](Screenshots/Checkout-3.png)
+
+![Checkout 4](Screenshots/Checkout-4.png)
+
+![Checkout 5](Screenshots/Checkout-5.png)
 
 ### 📚 API Documentation
 
