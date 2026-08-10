@@ -121,13 +121,36 @@ namespace Store.KH.APIs.Helper
             return services;
         }
 
-        private static IServiceCollection AddRedisServices(this IServiceCollection services , IConfiguration configuration)
+        //private static IServiceCollection AddRedisServices(this IServiceCollection services , IConfiguration configuration)
+        //{
+        //    services.AddSingleton<IConnectionMultiplexer>((serviceProvider) =>
+        //    {
+        //       var connection = configuration.GetConnectionString("Redis");
+        //        return ConnectionMultiplexer.Connect(connection);
+        //    });
+        //    return services;
+        //}
+        private static IServiceCollection AddRedisServices(
+      this IServiceCollection services,
+      IConfiguration configuration)
         {
-            services.AddSingleton<IConnectionMultiplexer>((serviceProvider) =>
+            services.AddSingleton<IConnectionMultiplexer>(serviceProvider =>
             {
-               var connection = configuration.GetConnectionString("Redis");
-                return ConnectionMultiplexer.Connect(connection);
+                var options = new ConfigurationOptions
+                {
+                    User = configuration["Redis:User"],
+                    Password = configuration["Redis:Password"],
+                    AbortOnConnectFail = false
+                };
+
+                options.EndPoints.Add(
+                    configuration["Redis:Host"]!,
+                    int.Parse(configuration["Redis:Port"]!)
+                );
+
+                return ConnectionMultiplexer.Connect(options);
             });
+
             return services;
         }
         private static IServiceCollection AddIdentityServices(this IServiceCollection services)

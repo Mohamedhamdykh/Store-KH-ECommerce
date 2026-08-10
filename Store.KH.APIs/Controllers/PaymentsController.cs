@@ -11,7 +11,7 @@ namespace Store.KH.APIs.Controllers
     public class PaymentsController : BaseApiController
     {
         private readonly IPaymentService _paymentService;
-        const string endPointSecret = "whsec_556ed119a8279ccac3e4cfc5c092404e32d769394429b1b0afe38a8380de3713";
+        const string endPointSecret = "whsec_SgrYOMb5V0bmlGwk797kZFzwOG8CJHtG";
 
         public PaymentsController(IPaymentService paymentService)
         {

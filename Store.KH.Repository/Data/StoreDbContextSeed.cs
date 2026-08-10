@@ -15,11 +15,15 @@ namespace Store.KH.Repository.Data
     {
         public async static Task SeedAsync(StoreDbContext _context)
         {
+            var dataPath = Path.Combine(
+                                        AppContext.BaseDirectory,
+                                        "Data",
+                                        "DataSeed");
             //Brands
             if (_context.brands.Count() == 0)
             {
                 //1.Data Read From Json File
-                var brandsData = File.ReadAllText(@"..\Store.KH.Repository\Data\DataSeed\brands.json");
+                var brandsData = File.ReadAllText(Path.Combine(dataPath, "brands.json"));
                 //2.Convert Json String To List<T>
                 var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandsData);
                 //Seed Data To DB
@@ -35,7 +39,7 @@ namespace Store.KH.Repository.Data
             if (_context.types.Count() == 0)
             {
                 //1.Data Read From Json File
-                var typesData = File.ReadAllText(@"..\Store.KH.Repository\Data\DataSeed\types.json");
+                var typesData = File.ReadAllText(Path.Combine(dataPath, "types.json"));
                 //2.Convert Json String To List<T>
                 var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
                 //Seed Data To DB
@@ -50,7 +54,7 @@ namespace Store.KH.Repository.Data
             if (_context.products.Count() == 0)
             {
                 //1.Data Read From Json File
-                var productsData = File.ReadAllText(@"..\Store.KH.Repository\Data\DataSeed\products.json");
+                var productsData = File.ReadAllText(Path.Combine(dataPath, "products.json"));
                 //2.Convert Json String To List<T>
                 var products = JsonSerializer.Deserialize<List<Product>>(productsData);
                 //Seed Data To DB
@@ -65,7 +69,7 @@ namespace Store.KH.Repository.Data
             if (_context.DeliveryMethods.Count() == 0)
             {
                 //1.Data Read From Json File
-                var deliveryData = File.ReadAllText(@"..\Store.KH.Repository\Data\DataSeed\delivery.json");
+                var deliveryData = File.ReadAllText(Path.Combine(dataPath, "delivery.json"));
                 //2.Convert Json String To List<T>
                 var delivery = JsonSerializer.Deserialize<List<DeliveryMethod>>(deliveryData);
                      

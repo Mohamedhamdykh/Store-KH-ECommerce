@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 using Store.KH.APIs.MiddleWares;
 using Store.KH.Core.Entities.Identity;
 using Store.KH.Repository.Data;
@@ -44,7 +45,7 @@ namespace Store.KH.APIs.Helper
                 app.UseSwaggerUI();
             }
 
-            app.UseStatusCodePagesWithReExecute("/error/{0}");
+            //app.UseStatusCodePagesWithReExecute("/error/{0}");
 
             app.UseStaticFiles();
             app.UseCors("MyPolicy");
@@ -52,9 +53,9 @@ namespace Store.KH.APIs.Helper
 
             app.UseAuthentication();
             app.UseAuthorization();
-
-
             app.MapControllers();
+            app.MapFallbackToFile("index.html");
+
 
            return app;
         }

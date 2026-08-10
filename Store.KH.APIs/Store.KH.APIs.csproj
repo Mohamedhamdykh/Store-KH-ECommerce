@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>d9fba016-99cd-4240-95b1-e3fd1430bfe8</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,5 +18,13 @@
   <ItemGroup>
     <ProjectReference Include="..\Store.KH.Service\Store.KH.Service.csproj" />
   </ItemGroup>
+
+<ItemGroup>
+  <Content Include="..\API\wwwroot\**\*">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    <Link>wwwroot\%(RecursiveDir)%(Filename)%(Extension)</Link>
+  </Content>
+</ItemGroup>
 
 </Project>

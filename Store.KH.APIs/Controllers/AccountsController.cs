@@ -13,7 +13,6 @@ using System.Security.Claims;
 
 namespace Store.KH.APIs.Controllers
 {
-    
     public class AccountsController : BaseApiController
     {
         private readonly IUserService _userService;

@@ -19,3 +19,9 @@ dist/
 *.log
 # Configuration / Secrets
 appsettings.json
+
+# Publish
+publish/
+**/PublishProfiles/
+/API/
+Store.KH.APIs/dotnet-tools.json

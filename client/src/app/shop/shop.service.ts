@@ -36,12 +36,12 @@ export class ShopService {
     }
 
     let params = new HttpParams();
-
-    if (this.shopParams.brandId !== 0) {
+   console.log('BRAND ID IN SERVICE:', this.shopParams.brandId);
+    if (this.shopParams.brandId) {
       params = params.append('brandId', this.shopParams.brandId.toString())
     }
 
-    if (this.shopParams.typeId !== 0) {
+    if (this.shopParams.typeId) {
       params = params.append('typeId', this.shopParams.typeId.toString())
     }
 
