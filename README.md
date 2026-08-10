@@ -93,6 +93,50 @@ The API provides endpoints for:
 
 Swagger is available for API documentation and testing.
 
+## 📷 Screenshots
+
+### 🏠 Home Page
+
+![Home Page](Screenshots/Home.png)
+
+### 🛍️ Shop
+
+![Shop](Screenshots/Shop.png)
+
+### 🔎 Product Filtering & Search
+
+![Filtering](Screenshots/Filter.png)
+
+![Search](Screenshots/Fiter2(Search).png)
+
+### 📦 Product Details
+
+![Product Details](Screenshots/Product-details.png)
+
+### 🛒 Shopping Basket
+
+![Add To Cart](Screenshots/Add-To-Cart.png)
+
+### 🔐 Authentication
+
+![Login](Screenshots/Login.png)
+
+### 💳 Checkout & Payment
+
+![Checkout](Screenshots/Checkout-1.png)
+
+![Checkout](Screenshots/Checkout-2.png)
+
+![Checkout](Screenshots/Checkout-3.png)
+
+### 📚 API Documentation
+
+![Swagger](Screenshots/Swagger.png)
+
+### ✅ Order Confirmation
+
+![Order Confirmation](Screenshots/Checkout-5.png)
+
 👨‍💻 Author
 
 Mohamed Hamdy Khalifa
